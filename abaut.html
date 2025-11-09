@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Qadamboyev Boburjon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<canvas id="bgCanvas" style="position:fixed;left:0;top:0;z-index:0;pointer-events:none"></canvas>
+
+<div class="header">
+  <div class="navbar container">
+    <div class="brand">
+      <div class="logo">QB</div>
+      <div class="title-block">
+        <div class="site-title">Qadamboyev Boburjon</div>
+        <div class="site-sub">Developer • Programmer</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="#about" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+      <button aria-label="Toggle theme" onclick="toggleTheme()">🌓</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="about" class="container" style="padding-top:120px; min-height:84vh;">
+    <h1 class="section-title reveal">About Me</h1>
+
+    <div class="about-grid reveal">
+      <div class="block block1">
+        <p>Hi, I'm <strong>Qadamboyev Boburjon</strong>. I imagine myself as a <span class="accent">designer</span> of digital experiences.</p>
+      </div>
+      <div class="block block2">
+        <p>Code is my <span class="accent">brush</span>, the screen is my <span class="accent">canvas</span>, and each project is a <span class="accent">living artwork</span>.</p>
+      </div>
+      <div class="block block3">
+        <p>I blend <span class="accent">creativity</span> and <span class="accent">technology</span> to craft interfaces that <em>move, breathe, and inspire</em>.</p>
+      </div>
+      <div class="block block4">
+        <p>Always asking myself: <em>"How can I make this design more intuitive, elegant, and fun?"</em></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Qadamboyev Boburjon • Built with passion</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="about.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Services — Qadamboyev Boburjon</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+  <canvas id="bgCanvas" aria-hidden="true" style="position:fixed;left:0;top:0;z-index:0;pointer-events:none"></canvas>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <div class="logo">QB</div>
+        <div class="title-block">
+          <div class="site-title">Qadamboyev Boburjon</div>
+          <div class="site-sub">Developer • Programmer</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="abaut.html">About</a>
+        <a href="#services" class="active">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+        <button aria-label="Toggle theme" onclick="toggleTheme()" style="background:transparent;border:none;color:var(--muted);margin-left:12px;cursor:pointer">🌓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <section id="services" class="container" style="padding-top:120px; min-height:84vh;">
+      <h1 class="section-title reveal">My Services</h1>
+
+      <p class="services-intro reveal">I provide a range of services to help you build, design, and secure your projects effectively.</p>
+
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Building responsive and scalable web applications tailored to your needs.</p>
+          <a href="contact.html" class="btn ghost">Hire Me</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Designing clean, user-friendly interfaces and polished visual experiences.</p>
+          <a href="contact.html" class="btn ghost">Get Started</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔒</div>
+          <h3>Security Audits</h3>
+          <p>Performing security analysis and implementing best practices for safe apps.</p>
+          <a href="contact.html" class="btn ghost">Consult</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Performance Optimization</h3>
+          <p>Improving speed, efficiency, and scalability of your web applications.</p>
+          <a href="contact.html" class="btn ghost">Optimize</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Qadamboyev Boburjon • Built with passion</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="services.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if(window.UI && UI.init) UI.init();
+  </script>
+</body>
+</html>

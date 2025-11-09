@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Skills — Qadamboyev Boburjon</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="skills.css">
+</head>
+<body>
+
+  <canvas id="bgCanvas" aria-hidden="true" style="position:fixed;left:0;top:0;z-index:0;pointer-events:none"></canvas>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <div class="logo">QB</div>
+        <div class="title-block">
+          <div class="site-title">Qadamboyev Boburjon</div>
+          <div class="site-sub">Developer • Programmer</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="abaut.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#skills" class="active">Skills</a>
+        <a href="contact.html">Contact</a>
+        <button aria-label="Toggle theme" onclick="toggleTheme()" style="background:transparent;border:none;color:var(--muted);margin-left:12px;cursor:pointer">🌓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <section id="skills" class="container" style="padding-top:120px; min-height:84vh;">
+      <h1 class="section-title reveal">My Skills</h1>
+
+      <p class="skills-intro reveal">Here are some technologies I work with, and one question I always ask myself as a designer: <strong>“How can I make myself more interesting and creative?”</strong></p>
+
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>HTML</h3>
+          <p>Building semantic, scalable web structure</p>
+          <div class="skill-progress" data-progress="95%"></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>CSS</h3>
+          <p>Creating polished, responsive designs</p>
+          <div class="skill-progress" data-progress="90%"></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🟨</div>
+          <h3>JavaScript</h3>
+          <p>Dynamic web apps and UI interactions</p>
+          <div class="skill-progress" data-progress="85%"></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚛️</div>
+          <h3>React</h3>
+          <p>Component-based UI & scalable apps</p>
+          <div class="skill-progress" data-progress="80%"></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🐍</div>
+          <h3>Python</h3>
+          <p>Backend scripting & automation</p>
+          <div class="skill-progress" data-progress="75%"></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🟢</div>
+          <h3>Node.js</h3>
+          <p>Server-side logic and APIs</p>
+          <div class="skill-progress" data-progress="70%"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Qadamboyev Boburjon • Built with passion</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="skills.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if(window.UI && UI.init) UI.init();
+  </script>
+</body>
+</html>

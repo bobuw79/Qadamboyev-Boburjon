@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — Qadamboyev Boburjon</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <canvas id="bgCanvas" aria-hidden="true" style="position:fixed;left:0;top:0;z-index:0;pointer-events:none"></canvas>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <div class="logo">QB</div>
+        <div class="title-block">
+          <div class="site-title">Qadamboyev Boburjon</div>
+          <div class="site-sub">Developer • Programmer</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="abaut.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="#contact" class="active">Contact</a>
+        <button aria-label="Toggle theme" onclick="toggleTheme()" style="background:transparent;border:none;color:var(--muted);margin-left:12px;cursor:pointer">🌓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <section id="contact" class="container" style="padding-top:120px; min-height:84vh;">
+      <h1 class="section-title reveal">Contact Me</h1>
+
+      <div class="contact-block reveal">
+        <p>If you want to work together or have any questions, feel free to send me a message.</p>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Qadamboyev Boburjon • Built with passion</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="contact.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if(window.UI && UI.init) UI.init();
+  </script>
+</body>
+</html>

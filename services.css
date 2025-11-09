@@ -1,0 +1,74 @@
+.section-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.services-intro {
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+/* Service Card */
+.service-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Button inside card */
+.service-card .btn {
+  margin-top: auto;
+  align-self: center;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}

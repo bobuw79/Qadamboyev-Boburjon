@@ -1,0 +1,103 @@
+/* ===== Variables (Dark/Light themes) ===== */
+:root {
+  --bg: #071027;
+  --panel: #0f1430;
+  --text: #e9f0fb;
+  --muted: #9fb2d9;
+  --accent: #2fb3ff;
+  --accent-2: #4d7cff;
+  --card: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.04);
+  --radius: 14px;
+  --maxw: 1200px;
+}
+
+:root[data-theme="light"] {
+  --bg: #f6fbff;
+  --panel: #ffffff;
+  --text: #071022;
+  --muted: #55687a;
+  --accent: #0066ff;
+  --accent-2: #00b3ff;
+  --card: rgba(7,16,34,0.02);
+  --glass: rgba(7,16,34,0.03);
+}
+
+/* ===== Reset ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+  overflow-x: hidden;
+  transition: none; /* toggle uchun animatsiya yo‘q */
+}
+
+/* ===== Container ===== */
+.container { max-width: var(--maxw); margin: 0 auto; padding: 28px; }
+
+/* ===== Header / Navbar ===== */
+.header {
+  position: fixed; top: 14px; left: 0; right: 0; display: flex; justify-content: center; z-index: 1000;
+}
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  width: calc(100% - 40px); max-width: var(--maxw);
+  padding: 12px 18px; border-radius: var(--radius);
+  background: var(--panel); border: 1px solid var(--glass);
+  backdrop-filter: blur(6px);
+  transition: none; /* animatsiya yo‘q */
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo {
+  width: 46px; height: 46px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  font-weight: 800; font-family: 'Orbitron', sans-serif;
+  color: var(--bg); /* toggle bilan o‘zgaradi */
+}
+
+/* ===== Nav Links ===== */
+.nav-links { display: flex; gap: 16px; align-items: center; }
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none; font-weight: 600; padding: 8px 10px;
+  border-radius: 8px; transition: none;
+}
+.nav-links a.active { color: var(--text); background: var(--glass); box-shadow: none; }
+.nav-links a:hover { color: var(--text); transform: none; }
+
+/* ===== Sections ===== */
+section { padding: 100px 18px; }
+
+/* ===== Headings ===== */
+h1,h2,h3,h4 { margin: 0; color: var(--text); }
+h1 { font-size: clamp(28px, 4.6vw, 48px); font-weight: 800; }
+h2 { font-size: clamp(20px, 3.2vw, 32px); font-weight: 700; }
+h3.section-title { font-family: "Orbitron",sans-serif; font-size: 26px; text-align: center; color: var(--text); }
+
+/* ===== Cards ===== */
+.card {
+  background: var(--card); color: var(--text);
+  padding: 18px; border-radius: var(--radius);
+  border: 1px solid var(--glass);
+  transition: none;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block; padding: 10px 16px; border-radius: 10px;
+  font-weight: 700; text-decoration: none; border: none; cursor: pointer;
+  transition: none;
+}
+.btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--glass); }
+
+/* ===== Footer ===== */
+footer { padding: 36px 0; text-align: center; color: var(--muted); }
+
+/* ===== Responsive ===== */
+@media (max-width:900px){ .navbar{padding:10px;} .nav-links{gap:10px;} }
+@media (max-width:620px){ .container{padding:16px;} }

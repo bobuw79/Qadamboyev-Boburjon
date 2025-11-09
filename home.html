@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Qadamboyev Boburjon — Home</title>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!-- canvas particles -->
+  <canvas id="bgCanvas" aria-hidden="true" style="position:fixed;left:0;top:0;z-index:0;pointer-events:none"></canvas>
+
+  <!-- header -->
+  <div class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <div class="logo">QB</div>
+        <div class="title-block">
+          <div class="site-title">Qadamboyev Boburjon</div>
+          <div class="site-sub">Developer • Programmer</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="abaut.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+        <button aria-label="Toggle theme" onclick="toggleTheme()" style="background:transparent;border:none;color:var(--muted);margin-left:12px;cursor:pointer">🌓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME -->
+  <main>
+    <section id="home" class="reveal" style="padding-top:120px;min-height:84vh;display:flex;align-items:center">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center">
+          <div>
+            <span class="eyebrow card" style="display:inline-block;padding:6px 10px;border-radius:999px;color:var(--muted);margin-bottom:14px">Hello — welcome</span>
+            <h1 style="font-size:48px;margin-top:8px">Hi, I'm <span style="color:var(--accent)">Qadamboyev Boburjon</span></h1>
+            <h2 style="font-size:22px;margin-top:8px;color:var(--muted)">I build scalable web apps, polished UIs and explore security.</h2>
+
+            <div style="margin-top:18px;display:flex;gap:12px">
+              <a class="btn primary" href="services.html">View My Work</a>
+              <a class="btn ghost" href="contact.html">Hire Me</a>
+            </div>
+
+            <div style="display:flex;gap:12px;margin-top:22px;">
+              <div class="card" style="padding:12px 14px;min-width:120px;text-align:center">
+                <div style="font-weight:800;font-size:18px">5+</div>
+                <div style="color:var(--muted);font-size:13px">Years Experience</div>
+              </div>
+              <div class="card" style="padding:12px 14px;min-width:120px;text-align:center">
+                <div style="font-weight:800;font-size:18px">20+</div>
+                <div style="color:var(--muted);font-size:13px">Projects</div>
+              </div>
+              <div class="card" style="padding:12px 14px;min-width:120px;text-align:center">
+                <div style="font-weight:800;font-size:18px">Open</div>
+                <div style="color:var(--muted);font-size:13px">For Work</div>
+              </div>
+            </div>
+          </div>
+
+          <aside>
+            <div class="card" style="padding:16px;">
+              <!-- profile block with subtle parallax -->
+              <div style="display:flex;gap:12px;align-items:center">
+                <div style="width:88px;height:88px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:28px">QB</div>
+                <div>
+                  <div style="font-weight:800">Qadamboyev Boburjon</div>
+                  <div style="color:var(--muted);font-size:13px;margin-top:6px">Frontend • Fullstack • Security</div>
+                </div>
+              </div>
+
+              <div style="margin-top:12px">
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <span style="background:var(--glass);padding:6px 8px;border-radius:8px;font-weight:700">React</span>
+                  <span style="background:var(--glass);padding:6px 8px;border-radius:8px;font-weight:700">Python</span>
+                  <span style="background:var(--glass);padding:6px 8px;border-radius:8px;font-weight:700">JS</span>
+                  <span style="background:var(--glass);padding:6px 8px;border-radius:8px;font-weight:700">CSS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:18px;padding:12px">
+              <div style="color:var(--muted);font-size:13px">Featured Project</div>
+              <div style="margin-top:8px;font-weight:800">Spider-UI — interactive component library</div>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">A UI lib built for secure, fast apps (demo).</div>
+              <div style="margin-top:10px"><a class="btn ghost" href="services.html">Explore</a></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Qadamboyev Boburjon • Built with passion</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="ui.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // init UI components explicitly (main.js will call UI.init() too)
+    if(window.UI && UI.init) UI.init();
+  </script>
+</body>
+</html>

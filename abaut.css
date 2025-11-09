@@ -1,0 +1,67 @@
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid layout for blocks */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+}
+
+/* Blocks */
+.block {
+  background: linear-gradient(135deg, var(--card-bg), var(--glass));
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.15);
+  border-left: 6px solid var(--accent);
+  transform: translateY(50px) rotate(0deg);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.4s ease;
+}
+
+.block:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.2);
+}
+
+.block p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.block em {
+  font-style: italic;
+  color: var(--accent-2);
+}
+
+/* Staggered animation */
+.block1 { transition-delay: 0.1s; }
+.block2 { transition-delay: 0.3s; }
+.block3 { transition-delay: 0.5s; }
+.block4 { transition-delay: 0.7s; }
+
+/* Reveal effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.show .block {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
